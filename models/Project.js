@@ -20,8 +20,12 @@ module.exports = (sequelize, DataTypes) => {
 
   Project.init(
     {
-      name: DataTypes.STRING,
-      preview_image: DataTypes.STRING,
+      name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: { notNull: true },
+      },
+      previewImage: DataTypes.STRING,
       images: DataTypes.ARRAY(DataTypes.STRING),
       title: DataTypes.STRING,
       subtitle: DataTypes.STRING,

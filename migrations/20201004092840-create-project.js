@@ -11,7 +11,7 @@ module.exports = {
       name: {
         type: Sequelize.STRING,
       },
-      preview_image: {
+      previewImage: {
         type: Sequelize.STRING,
       },
       images: {
