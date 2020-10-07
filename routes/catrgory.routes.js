@@ -5,7 +5,7 @@ const router = Router();
 router.get("/", async (req, res) => {
   try {
     const categories = await Category.findAll({
-      attributes: ["id", "title"],
+      attributes: ["id", "name", "title"],
       include: {
         model: Project,
         attributes: ["id"],

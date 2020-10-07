@@ -1,6 +1,6 @@
 module.exports = {
   PREVIEW_IMAGE_RESIZE: {
-    width: 400,
+    width: 500,
     height: 400,
   },
 };
