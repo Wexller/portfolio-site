@@ -4,6 +4,7 @@ module.exports = {
       Projects: "Проекты",
       Users: "Пользователи",
       Categories: "Категории",
+      Feedbacks: "Обратная связь",
     },
     properties: {
       name: "Название",
@@ -16,6 +17,7 @@ module.exports = {
       createdAt: "Создана",
       updatedAt: "Обновлена",
       Categories: "Категории",
+      message: "Сообщение",
     },
     buttons: {
       save: "Сохранить",
@@ -23,6 +25,13 @@ module.exports = {
       edit: "Редактировать",
       filter: "Фильтр",
       remove: "Удалить",
+    },
+    resources: {
+      Feedbacks: {
+        properties: {
+          name: "Имя",
+        },
+      },
     },
   },
 };
