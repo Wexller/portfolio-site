@@ -1,11 +1,12 @@
 const AdminBro = require("admin-bro");
-const { Project, Category, User, Feedback } = require("../models");
+const { Project, Category, User, Feedback, Technology } = require("../models");
 const locale = require("./locale");
 const {
   UserResource,
   ProjectResource,
   CategoryResource,
   FeedbackResource,
+  TechnologyResource,
 } = require("./resources");
 
 const sidebarGroups = {
@@ -48,6 +49,13 @@ const adminBro = new AdminBro({
       resource: Feedback,
       options: {
         ...FeedbackResource,
+        parent: sidebarGroups.content,
+      },
+    },
+    {
+      resource: Technology,
+      options: {
+        ...TechnologyResource,
         parent: sidebarGroups.content,
       },
     },

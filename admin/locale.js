@@ -5,6 +5,7 @@ module.exports = {
       Users: "Пользователи",
       Categories: "Категории",
       Feedbacks: "Обратная связь",
+      Technologies: "Технологии",
     },
     properties: {
       name: "Название",
@@ -19,6 +20,10 @@ module.exports = {
       Categories: "Категории",
       message: "Сообщение",
       sort: "Сортировка",
+      mdiClass: "MDI Класс",
+      bgColor: "Цвет фона",
+      mdiColor: "Цвет MDI",
+      textColor: "Цвет текста",
     },
     buttons: {
       save: "Сохранить",

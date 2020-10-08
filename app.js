@@ -15,6 +15,7 @@ app.use(express.json({ extended: true }));
 app.use("/api/project", require("./routes/project.routes"));
 app.use("/api/category", require("./routes/catrgory.routes"));
 app.use("/api/feedback", require("./routes/feedback.routes"));
+app.use("/api/technology", require("./routes/technology.routes"));
 
 app.get("/", async (req, res) => {
   return res.send("INDEX");

@@ -3,4 +3,5 @@ module.exports = {
   ProjectResource: require("./projectResource"),
   CategoryResource: require("./categoryResource"),
   FeedbackResource: require("./feedbackResource"),
+  TechnologyResource: require("./technologyResource"),
 };
