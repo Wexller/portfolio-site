@@ -18,6 +18,7 @@ module.exports = {
       updatedAt: "Обновлена",
       Categories: "Категории",
       message: "Сообщение",
+      sort: "Сортировка",
     },
     buttons: {
       save: "Сохранить",

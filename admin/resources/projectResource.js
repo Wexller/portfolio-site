@@ -45,27 +45,27 @@ const action = {
 
 module.exports = {
   properties: {
-    name: {
+    title: {
       position: 1,
+      isVisible: hideInList,
+    },
+    subtitle: {
+      position: 2,
+      isVisible: hideInList,
     },
     uploadImage: {
-      position: 2,
+      position: 3,
       components: {
         edit: AdminBro.bundle("../components/upload-image.edit.jsx"),
         list: AdminBro.bundle("../components/upload-image.list.jsx"),
       },
     },
-    title: {
-      position: 3,
-      isVisible: hideInList,
-    },
-    subtitle: {
+    sort: {
       position: 4,
-      isVisible: hideInList,
     },
     text: {
       position: 5,
-      type: "richtext",
+      type: "textarea",
       isVisible: hideInList,
     },
     link: {

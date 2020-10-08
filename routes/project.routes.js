@@ -13,6 +13,10 @@ router.get("/", async (req, res) => {
           through: { attributes: [] },
         },
       ],
+      order: [
+        ["sort", "ASC"],
+        ["id", "DESC"],
+      ],
     });
 
     res.json(projects);

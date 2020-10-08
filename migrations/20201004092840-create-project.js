@@ -8,9 +8,6 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      name: {
-        type: Sequelize.STRING,
-      },
       previewImage: {
         type: Sequelize.STRING,
       },
@@ -28,6 +25,9 @@ module.exports = {
       },
       link: {
         type: Sequelize.STRING,
+      },
+      sort: {
+        type: Sequelize.INTEGER,
       },
       createdAt: {
         allowNull: false,

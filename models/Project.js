@@ -20,17 +20,34 @@ module.exports = (sequelize, DataTypes) => {
 
   Project.init(
     {
-      name: {
+      sort: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate: { notNull: true },
+        defaultValue: 100,
+      },
+      previewImage: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: { notNull: true },
       },
-      previewImage: DataTypes.STRING,
-      images: DataTypes.ARRAY(DataTypes.STRING),
-      title: DataTypes.STRING,
-      subtitle: DataTypes.STRING,
-      text: DataTypes.TEXT,
+      title: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: { notNull: true },
+      },
+      subtitle: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: { notNull: true },
+      },
+      text: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        validate: { notNull: true },
+      },
       link: DataTypes.STRING,
+      images: DataTypes.ARRAY(DataTypes.STRING),
     },
     {
       sequelize,

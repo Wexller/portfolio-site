@@ -35,7 +35,7 @@ const Edit = ({ record, property, onChange }) => {
   };
 
   return (
-    <Box>
+    <Box marginBottom="xxl">
       <Label>{property.label}</Label>
       <CheckboxGroup
         name="fruits"
