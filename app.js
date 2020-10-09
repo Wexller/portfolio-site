@@ -30,7 +30,8 @@ const router = AdminBroExpress.buildAuthenticatedRouter(
 );
 
 const checkAdminPermission = (req, res, next) => {
-  console.log(req.ip);
+  const ip = req.headers["x-forwarded-for"] || req.connection.remoteAddress;
+  console.log(ip);
   next();
 };
 
