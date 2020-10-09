@@ -29,13 +29,7 @@ const router = AdminBroExpress.buildAuthenticatedRouter(
   sessionStorage
 );
 
-const checkAdminPermission = (req, res, next) => {
-  const ip = req.headers["x-forwarded-for"] || req.connection.remoteAddress;
-  console.log(ip);
-  next();
-};
-
-app.use(adminPanel.options.rootPath, checkAdminPermission, router);
+app.use(adminPanel.options.rootPath, router);
 app.use(adminPanel.options.loginPath, router);
 
 app.use("/uploads", express.static("uploads"));
