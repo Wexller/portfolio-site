@@ -28,8 +28,15 @@ const router = AdminBroExpress.buildAuthenticatedRouter(
   null,
   sessionStorage
 );
-app.use(adminPanel.options.rootPath, router);
+
+const checkAdminPermission = (req, res, next) => {
+  console.log(req.ip);
+  next();
+};
+
+app.use(adminPanel.options.rootPath, checkAdminPermission, router);
 app.use(adminPanel.options.loginPath, router);
+
 app.use("/uploads", express.static("uploads"));
 
 if (process.env.NODE_ENV === "production") {
