@@ -1,6 +1,5 @@
 const express = require("express");
 const path = require("path");
-const bodyParser = require("body-parser");
 
 const AdminBro = require("admin-bro");
 const AdminBroExpress = require("admin-bro-expressjs");
@@ -17,9 +16,14 @@ app.use("/api/category", require("./routes/catrgory.routes"));
 app.use("/api/feedback", require("./routes/feedback.routes"));
 app.use("/api/technology", require("./routes/technology.routes"));
 
-app.get("/", async (req, res) => {
-  return res.send("INDEX");
-});
+if (process.env.NODE_ENV === 'production') {
+  app.use('/', express.static(path.join(__dirname, 'client', 'build')))
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+  })
+}
+
 const PORT = process.env.PORT || 5000;
 
 const adminPanel = require("./admin");
